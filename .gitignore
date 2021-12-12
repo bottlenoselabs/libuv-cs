@@ -1,0 +1,18 @@
+# JetBrains
+/.idea/
+
+# C# build artifacts
+/bin/
+/obj/
+
+# C# packages
+/nupkg/
+
+# Native libraries
+/lib/
+
+# C2CS
+/ast/
+
+# macOS
+.DS_store
