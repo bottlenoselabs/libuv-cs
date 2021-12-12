@@ -10,9 +10,9 @@ function exit_if_last_command_failed() {
 }
 
 function bindgen {
-    C2CS ast -i $DIR/ext/libuv/include/uv.h -o $DIR/ast/uv.json -s $DIR/ext/libuv/include
+    c2cs ast -i $DIR/ext/libuv/include/uv.h -o $DIR/ast/uv.json -s $DIR/ext/libuv/include
     exit_if_last_command_failed
-    C2CS cs -i $DIR/ast/uv.json -o $DIR/src/uv/uv.cs -l "uv" -c "uv" -g $DIR/ignored.txt
+    c2cs cs -i $DIR/ast/uv.json -o $DIR/src/uv/uv.cs -l "uv" -c "uv" -g $DIR/ignored.txt
     exit_if_last_command_failed
 }
 
