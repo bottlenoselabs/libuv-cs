@@ -124,8 +124,8 @@ internal static unsafe class Program
             var consoleKey = Console.ReadKey();
             if (consoleKey.Key == ConsoleKey.X)
             {
-                Console.WriteLine();
                 // gracefully exit
+                Console.WriteLine();
                 Exit();
             }
         }
