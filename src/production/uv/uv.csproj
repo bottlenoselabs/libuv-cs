@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- MSBuild settings -->
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <!-- NuGet -->
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <RepositoryUrl>https://github.com/bottlenoselabs/SDL-cs</RepositoryUrl>
+        <PackageDescription>C# bindings for libuv. This package only includes C# code; it does not include any native library.</PackageDescription>
+        <DevelopmentDependency>true</DevelopmentDependency>
+    </PropertyGroup>
+
+    <!-- NuGet package references -->
+    <ItemGroup>
+        <PackageReference Include="bottlenoselabs.C2CS.Runtime" Version="1.6.32" PrivateAssets="all" />
+    </ItemGroup>
+
+    <Import Project="$(MSBuildThisFileDirectory)/bottlenoselabs.uv.props" />
+
+</Project>

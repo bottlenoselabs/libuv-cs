@@ -1,0 +1,29 @@
+<Project>
+  
+  <PropertyGroup>
+    <BottlenoseLabsUvDirectoryPath Condition="Exists('$(MSBuildThisFileDirectory)/uv.cs')">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</BottlenoseLabsUvDirectoryPath>
+    <BottlenoseLabsUvDirectoryPath Condition="Exists('$(MSBuildThisFileDirectory)/../content/uv.cs')">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/..'))</BottlenoseLabsUvDirectoryPath>
+    <BottlenoseLabsUvContentDirectoryPath Condition="Exists('$(MSBuildThisFileDirectory)/uv.cs')">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</BottlenoseLabsUvContentDirectoryPath>
+    <BottlenoseLabsUvContentDirectoryPath Condition="Exists('$(MSBuildThisFileDirectory)/../content/uv.cs')">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../content'))</BottlenoseLabsUvContentDirectoryPath>
+  </PropertyGroup>
+
+  <!-- Content include all files + compile all .cs files -->
+  <ItemGroup>
+    <Compile Include="$(BottlenoseLabsUvContentDirectoryPath)/**/*.cs" >
+      <Pack>true</Pack>
+      <PackagePath>content/</PackagePath>
+      <Link>bottlenoselabs/uv/%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
+    <Compile Remove="$(BottlenoseLabsUvContentDirectoryPath)/obj/**/*.cs" />
+    <Compile Remove="$(BottlenoseLabsUvContentDirectoryPath)/bin/**/*.cs" />
+    <None Include="$(MSBuildThisFileDirectory)/bottlenoselabs.uv.props">
+      <PackagePath>build/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)/bottlenoselabs.uv.targets">
+      <PackagePath>build/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
