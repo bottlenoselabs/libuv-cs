@@ -8,7 +8,7 @@ Automatically updated C# bindings for https://github.com/libuv/libuv with native
 
 1. Install the `bottlenoselabs.uv` NuGet package. This package contains only the C# bindings. To get the pre-release development packages, use the NuGet package feed: `https://www.myget.org/F/bottlenoselabs/api/v3/index.json`.
 2. Install one of the following packages which contain the native library for the runtime identifier. More than one these packages can be installed at once if desired but is not strictly required and will waste disk space unnecessarily. 
-   -  `bottlenoselabs.uv.runtime.win-x64`: The `uvs.dll` native binary for Windows (64-bit).
+   -  `bottlenoselabs.uv.runtime.win-x64`: The `uv.dll` native binary for Windows (64-bit).
    -  `bottlenoselabs.uv.runtime.osx`: The `libuv.dylib` for macOS Intel (`osx-x64`) + macOS Apple Silicon (`osx-arm64`).
    -  `bottlenoselabs.uv.runtime.linux-x64`: The `libuv.so` for Linux x64.
 
@@ -18,7 +18,7 @@ Automatically updated C# bindings for https://github.com/libuv/libuv with native
 2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/libuv-cs`.
 3. Build the native library by running `bash ./library.sh`. (Building for Windows requires MSYS2 or Windows Subsystem for Linux with Ubuntu).
 4. Add the C# project `./src/cs/production/uv/uv.csproj` to your solution.
-5. Add one of the C# shim projects for the native binary in the same way as `uv`.
+5. Add one of the C# shim projects for the native binary in the same way as `uv.csproj`.
    -  `uv.win-x64`: The `uv.dll` native binary for Windows x64.
    -  `uv.osx`: The `libuv.dylib` for macOS Intel (`osx-x64`) + macOS Apple Silicon (`osx-arm64`).
    -  `uv.linux-x64`: The `libuv.so` for Linux x64.
