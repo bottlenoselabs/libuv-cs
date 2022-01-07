@@ -2,18 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
 using System.Diagnostics.CodeAnalysis;
-using C2CS;
-using JetBrains.Annotations;
 
-// ReSharper disable once InconsistentNaming
-// ReSharper disable once CheckNamespace
+namespace bottlenoselabs;
 
 [SuppressMessage(
     "StyleCop.CSharp.NamingRules",
-    "SA1300",
-    MessageId = "Element should begin with upper-case letter",
-    Justification = "'uv' is the name of the product.")]
-[PublicAPI]
+    "SA1300:Element should begin with upper-case letter",
+    Justification = "Product name.")]
+// ReSharper disable once InconsistentNaming
 public static unsafe partial class uv
 {
     public static void CheckErrorCode(string functionName, int errorCode)
@@ -35,7 +31,7 @@ public static unsafe partial class uv
     public static string GetErrorCodeName(int errorCode)
     {
         var cString = uv_err_name(errorCode);
-        var result = Runtime.String(cString);
+        var result = Runtime.CStrings.String(cString);
         return result;
     }
 
@@ -43,7 +39,7 @@ public static unsafe partial class uv
     {
         var buffer = stackalloc byte[512];
         var cString = uv_strerror_r(errorCode, buffer, 512);
-        var result = Runtime.String(cString);
+        var result = Runtime.CStrings.String(cString);
         return result;
     }
 }

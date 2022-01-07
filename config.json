@@ -1,0 +1,10 @@
+{
+    "inputFilePath": "ext/libuv/include/uv.h",
+    "outputFilePath": "src/cs/production/uv/uv.cs",
+    "namespaceName": "bottlenoselabs",
+    "machineBitWidth": 64,
+    "ignoredTypeNames": [
+      "XX",
+      "UV__ERR"
+    ]
+  }

@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
 using System.Runtime.InteropServices;
-using static uv;
+using static bottlenoselabs.uv;
 
 internal static unsafe class Program
 {
