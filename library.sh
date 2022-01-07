@@ -97,7 +97,7 @@ function build_libuv() {
     elif [[ "$TARGET_BUILD_OS" == "macos" ]]; then
         LIBUV_LIBRARY_FILENAME="libuv.dylib"
         LIBUV_LIBRARY_FILE_PATH_BUILD="$(perl -MCwd -e 'print Cwd::abs_path shift' $LIBUV_BUILD_DIR/$LIBUV_LIBRARY_FILENAME)"
-    elif [[ "$TARGET_BUILD_OS" == "microsoft" ]]; then
+    elif [[ "$TARGET_BUILD_OS" == "windows" ]]; then
         LIBUV_LIBRARY_FILENAME="libuv.dll"
         LIBUV_LIBRARY_FILE_PATH_BUILD="$LIBUV_BUILD_DIR/$LIBUV_LIBRARY_FILENAME"
     fi
