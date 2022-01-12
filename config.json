@@ -1,10 +1,47 @@
 {
+    "TODO": "Ignore descendent types",
+    "TODO2": "Create 'virtual' function for macros to use.",
     "inputFilePath": "ext/libuv/include/uv.h",
     "outputFilePath": "src/cs/production/uv/uv.cs",
     "namespaceName": "bottlenoselabs",
     "machineBitWidth": 64,
     "ignoredTypeNames": [
+      "UV__ERR",
       "XX",
-      "UV__ERR"
+      "UV_FS_O_DIRECT",
+      "UV_FS_O_NOATIME",
+      "UV_FS_O_FILEMAP",
+      "UV_FS_O_RANDOM",
+      "UV_FS_O_SHORT_LIVED",
+      "UV_FS_O_SEQUENTIAL",
+      "UV_FS_O_TEMPORARY",
+      "UV_HAVE_KQUEUE"
+    ],
+    "opaqueTypeNames": [
+      "uv_sem_t",
+      "uv_loop_t",
+      "uv_fs_t",
+      "uv_idle_t",
+      "uv_check_t",
+      "uv_prepare_t",
+      "uv_poll_t",
+      "uv_pipe_t",
+      "uv_connect_t",
+      "uv_stream_t",
+      "uv_udp_t",
+      "uv_tcp_t",
+      "uv_key_t",
+      "uv_rwlock_t",
+      "uv_mutex_t",
+      "uv_cond_t",
+      "uv_once_t",
+      "uv_tty_t",
+      "uv_thread_t",
+      "uv_getnameinfo_t",
+      "uv_fs_event_t",
+      "uv_barrier_t",
+      "uv_getaddrinfo_t",
+      "uv_work_t",
+      "uv_random_t"
     ]
   }

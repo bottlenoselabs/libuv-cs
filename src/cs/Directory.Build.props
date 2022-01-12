@@ -12,10 +12,6 @@
         <EnableAnalyzersStyleCop>true</EnableAnalyzersStyleCop>
     </PropertyGroup>
 
-    <!-- <ItemGroup>
-        <PackageReference Include="bottlenoselabs.MSBuild.Tools" Version="0.1.132" PrivateAssets="all" />
-    </ItemGroup> -->
-
     <ItemGroup>
         <PackageReference Include="bottlenoselabs.MSBuild.Tools" Version="0.1.132">
             <PrivateAssets>all</PrivateAssets>
