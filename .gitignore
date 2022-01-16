@@ -11,8 +11,5 @@ obj/
 # Native libraries
 /lib/
 
-# C2CS
-/ast/
-
 # macOS
 .DS_store

@@ -9,12 +9,7 @@
         <NoWarn>$(NoWarn);CA1303;CA1707</NoWarn>
     </PropertyGroup>
 
-    <!-- C# project references -->
-    <ItemGroup>
-        <ProjectReference Include="..\..\production\uv\uv.csproj" />
-        <ProjectReference Include="..\..\production\uv.runtime.win-x64\uv.runtime.win-x64.csproj" />
-        <ProjectReference Include="..\..\production\uv.runtime.osx\uv.runtime.osx.csproj" />
-        <ProjectReference Include="..\..\production\uv.runtime.linux-x64\uv.runtime.linux-x64.csproj" />
-    </ItemGroup>
+    <!-- uv: bindings + native library -->
+    <Import Project="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../../../../uv.props'))" />
 
 </Project>

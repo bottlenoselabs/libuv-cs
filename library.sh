@@ -87,9 +87,12 @@ function exit_if_last_command_failed() {
 function build_libuv() {
     echo "Building libuv..."
     LIBUV_BUILD_DIR="$DIR/cmake-build-release-libuv"
+    rm -r $LIBUV_BUILD_DIR
 
     cmake -S $DIR/ext/libuv -B $LIBUV_BUILD_DIR $CMAKE_ARCH_ARGS -DLIBUV_BUILD_TESTS=OFF
+    exit_if_last_command_failed
     cmake --build $LIBUV_BUILD_DIR --config Release
+    exit_if_last_command_failed
 
     if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
         LIBUV_LIBRARY_FILENAME="libuv.so"
